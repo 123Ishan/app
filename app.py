@@ -29,5 +29,5 @@ def fetch_data():
     result = row.iloc[0][radius_column]
     return jsonify({radius_column: result})
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
