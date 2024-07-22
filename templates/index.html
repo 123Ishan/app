@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2A ZIP Code Data Fetcher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #f8f9fa; 
+            padding-top: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">A2A Navigator</h1>
+        <form id="dataForm">
+            <div class="mb-3">
+                <label for="zipCode" class="form-label">Enter ZIP Code:</label>
+                <input type="text" class="form-control" id="zipCode" placeholder="Enter ZIP Code" required>
+            </div>
+            <div class="mb-3">
+                <label for="radiusColumn" class="form-label">Select Radius:</label>
+                <select class="form-select" id="radiusColumn" required>
+                    <option value="">Select Radius</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="results" class="mt-4"></div>
+    </div>
+
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const zipCode = document.getElementById('zipCode').value;
+            const radiusColumn = document.getElementById('radiusColumn').value;
+            fetch(`/fetch-data?zipCode=${zipCode}&radiusColumn=${radiusColumn}`)
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    if (data.error) {
+                        resultsDiv.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                    } else {
+                        resultsDiv.innerHTML = `<div class="alert alert-success">Number of Agents in radius ${radiusColumn} miles: ${data[radiusColumn]}</div>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('results').innerHTML = `<div class="alert alert-danger">An error occurred while fetching data.</div>`;
+                });
+        });
+    </script>
+</body>
+</html>
