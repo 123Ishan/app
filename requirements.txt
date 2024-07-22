@@ -91,7 +91,6 @@ flake8 @ file:///Users/cbousseau/work/recipes/ci_py311/flake8_1677931981927/work
 Flask @ file:///Users/cbousseau/work/recipes/ci_py311/flask_1677937489551/work
 fonttools==4.25.0
 frozenlist @ file:///Users/cbousseau/work/recipes/ci_py311/frozenlist_1677923867353/work
-fsspec @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b41fwm88q_/croot/fsspec_1682526071956/work
 future @ file:///Users/cbousseau/work/recipes/ci_py311_2/future_1678994664110/work
 gensim @ file:///Users/cbousseau/work/recipes/ci_py311/gensim_1677971806459/work
 geographiclib==2.0
@@ -102,13 +101,9 @@ greenlet @ file:///Users/cbousseau/work/recipes/ci_py311/greenlet_1677926210411/
 gunicorn==22.0.0
 h5py @ file:///Users/cbousseau/work/recipes/ci_py311/h5py_1677937901660/work
 HeapDict @ file:///Users/ktietz/demo/mc3/conda-bld/heapdict_1630598515714/work
-holoviews @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_f0kn6h75hh/croot/holoviews_1690477580363/work
-huggingface-hub @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_a3pjdbppt5/croot/huggingface_hub_1686693687731/work
-hvplot @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_30omxxom8t/croot/hvplot_1686021066828/work
 hyperlink @ file:///tmp/build/80754af9/hyperlink_1610130746837/work
 idna @ file:///Users/cbousseau/work/recipes/ci_py311/idna_1677906072337/work
 imagecodecs @ file:///Users/cbousseau/work/recipes/ci_py311_2/imagecodecs_1678994839331/work
-imageio @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_c1sh4q1483/croot/imageio_1687264958491/work
 imagesize @ file:///Users/cbousseau/work/recipes/ci_py311/imagesize_1677932611633/work
 imbalanced-learn @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_26_yvb9nba/croot/imbalanced-learn_1685020915768/work
 importlib-metadata @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_84cgjb624t/croot/importlib-metadata_1678997087058/work
